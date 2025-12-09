@@ -1,9 +1,10 @@
-// LINEアプリ優先で開き、失敗したらwebにフォールバックするロジック
+// LINE link updated by user (lin.ee)
 (function () {
-  // --- カスタマイズする部分（本番のLINE IDに置き換えてください） ---
-  const appUrl = 'line://ti/p/@YOUR_LINE_ID';
-  const webUrl = 'https://qr-official.line.me/gs/M_033yhecu_GW.png?oat_content=qr';
-  // ---------------------------------------------------------------
+  // Using the provided lin.ee short link for both app and web fallback.
+  // This link typically redirects to the appropriate LINE friend-add page
+  // and should work on mobile and desktop.
+  const appUrl = 'https://lin.ee/NvWtvjq';
+  const webUrl = 'https://lin.ee/NvWtvjq';
 
   const link = document.getElementById('line-cta-link');
   if (!link) return;
@@ -29,6 +30,7 @@
     }
     document.addEventListener('visibilitychange', handleVisibility);
 
+    // Try to open the provided link. The lin.ee link will redirect appropriately.
     window.location.href = appUrl;
 
     setTimeout(function () {
