@@ -155,15 +155,39 @@ a {
 /* ========================================
    ファーストビュー（ヒーローセクション）
 ======================================== */
+/* ===== ヒーローセクション（画像差し込み版） ===== */
+
 .hero {
     position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    background: #000;  /* 念のためのベース色 */
     overflow: hidden;
-    background: url("../img/Gemini_Generated_Image_gfyasqgfyasqgfya.png") no-repeat center right;
-    background-size: cover;
+}
+
+/* 右側に表示する背景画像 */
+.hero-bg-image {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%;
+    max-width: 900px;
+    height: auto;
+    object-fit: cover;
+    pointer-events: none;   /* クリックを邪魔しない */
+    z-index: 1;
+}
+
+/* 左側のテキストブロック */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    max-width: 650px;
+    padding: 80px 5vw;
 }
 
 
