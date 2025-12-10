@@ -162,9 +162,10 @@ a {
     align-items: center;
     justify-content: flex-start;
     overflow: hidden;
-    background: url("img/Gemini_Generated_Image_gfyasqgfyasqgfya.png") no-repeat center right;
+    background: url("../img/Gemini_Generated_Image_gfyasqgfyasqgfya.png") no-repeat center right;
     background-size: cover;
 }
+
 
 
 
