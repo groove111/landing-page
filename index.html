@@ -37,7 +37,7 @@
                     <i class="fab fa-line"></i>
                     LINEで友だち追加して購入する
                 </a>
-                <p class="cta-note">LINE登録者限定の特別割引実施中！</p>
+            <p class="cta-note">LINE登録者限定の特別割引実施中！</p>
             </div>
             <div class="hero-image">
                 <div class="product-mockup">
@@ -427,7 +427,7 @@
                         <span>毎日使う必要はありますか？</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer" style="display:none;">
                         <p><strong>最初の5日間は毎日使うことで効果が発揮されます。</strong>消臭成分が靴の内部にしっかり浸透し、ニオイの元から徹底的にケアします。</p>
                         <p>5日間使用した後は、気になるときに使用するだけでOKです。週に1〜2回程度の使用でも、持続的な消臭効果を維持できます。</p>
                     </div>
@@ -437,7 +437,7 @@
                         <span>子どもが使っても大丈夫ですか？</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer" style="display:none;">
                         <p>はい、安心してお使いいただけます。カキタンニンやサイクロデキストリンなど、天然由来の成分を中心に配合しており、お子様の靴にも安全にご使用いただけます。</p>
                         <p>実際に、多くのスポーツをされるお子様を持つ親御様にご愛用いただいています。</p>
                     </div>
@@ -447,7 +447,7 @@
                         <span>どんな靴に使えますか？</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer" style="display:none;">
                         <p>スニーカー、ランニングシューズ、スパイク、バスケットシューズ、トレーニングシューズなど、あらゆるスポーツシューズにご使用いただけます。</p>
                         <p>また、革靴やブーツにも使用可能です。ただし、エナメル素材やデリケートな素材の場合は、目立たない部分で試してからご使用ください。</p>
                     </div>
@@ -457,7 +457,7 @@
                         <span>香りはどのくらい残りますか？</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer" style="display:none;">
                         <p>さわやかな香りは、使用後約1〜2日程度ほのかに残ります。強すぎない自然な香りなので、スポーツ後の快適さを損ないません。</p>
                         <p>香りが苦手な方でも安心してお使いいただける、控えめな香り設計です。</p>
                     </div>
@@ -467,7 +467,7 @@
                         <span>1本でどれくらいの期間使えますか？</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer" style="display:none;">
                         <p>使用量や使用頻度により異なりますが、1本で約60回分ご使用いただけます。</p>
                         <p>最初の5日間は毎日使用し、その後週に2〜3回使用する場合、約1〜2ヶ月程度ご使用いただけます。複数の靴をお持ちの場合や、ご家族でシェアされる場合は、まとめ買いがおすすめです。</p>
                     </div>
@@ -477,7 +477,7 @@
                         <span>効果が感じられない場合はどうすればいいですか？</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                    <div class="faq-answer">
+                    <div class="faq-answer" style="display:none;">
                         <p>まず、<strong>5日間連続での使用</strong>をお試しください。効果を実感いただくには、継続使用が重要です。</p>
                         <p>また、靴を洗ってから使用すると、より効果的です。それでも効果を感じられない場合は、LINEでお気軽にご相談ください。使い方のアドバイスをさせていただきます。</p>
                     </div>
@@ -574,5 +574,33 @@
     </div>
 
     <script src="js/script.js"></script>
+
+    <!-- FAQ用の開閉スクリプト -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach(item => {
+          const question = item.querySelector(".faq-question");
+          const answer = item.querySelector(".faq-answer");
+
+          question.addEventListener("click", () => {
+            const isOpen = answer.style.display === "block";
+
+            // 1つだけ開きたい場合は、他を全部閉じる
+            faqItems.forEach(i => {
+              const a = i.querySelector(".faq-answer");
+              a.style.display = "none";
+              i.classList.remove("open");
+            });
+
+            if (!isOpen) {
+              answer.style.display = "block";
+              item.classList.add("open");
+            }
+          });
+        });
+      });
+    </script>
 </body>
 </html>
