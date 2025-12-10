@@ -1197,140 +1197,148 @@ a {
 /* ========================================
    レスポンシブデザイン
 ======================================== */
+
+/* PC・タブレット共通のベース */
+.hero-main-visual {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* features 図解のPC表示 */
+.features-picture img {
+    display: block;
+    max-width: 900px;
+    width: 100%;
+    margin: 40px auto 0;
+}
+
+/* ▼ここからスマホ用（幅768px以下）▼ */
 @media (max-width: 768px) {
+
     .hero-title {
         font-size: 2.5rem;
-    }
-        
-   /* スマホ用 features画像の最適表示 */
-    .features-picture img {
-        max-width: 100%;
-        width: 100%;
-        margin: 24px 0 0;
-        border-radius: 0;
-    }
-
-    .features {
-        padding: 60px 0;
     }
 
     .hero-subtitle {
         font-size: 1.1rem;
     }
 
-       /* ヒーロー画像：スマホでは画面幅いっぱいに */
+    /* ヒーロー画像：スマホでは画面幅いっぱい＋余白なし */
     .hero {
         margin: 0;
         padding: 0;
     }
 
     .hero-main-visual {
-        display: block;
         width: 100%;
         height: auto;
         border-radius: 0;
     }
 
-    /* 「なぜ、ここまで消臭できるのか？」図解（features画像） */
+    /* 「なぜ、ここまで消臭できるのか？」図解（スマホ用） */
     .features {
-        padding: 60px 0;          /* 少し余白を詰める（お好みで調整OK） */
+        padding: 60px 0;   /* 少し余白を詰める（お好みで調整OK） */
     }
 
     .features-picture img {
-    display: block;
-    max-width: 900px;
-    width: 100%;
-    margin: 40px auto 0;
-　　}
-
+        max-width: 100%;   /* 900px制限を解除して全幅に */
+        width: 100%;
+        margin: 24px 0 0;  /* 見出しとの距離だけ少し空ける */
+        border-radius: 0;  /* 角丸が気になるなら0に */
+    }
 
     .hero-features {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .section-title,
     .section-title-white {
         font-size: 2rem;
     }
-    
+
     .problems-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .benefits-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .features-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .usage-steps {
         flex-direction: column;
     }
-    
+
     .usage-arrow {
         transform: rotate(90deg);
     }
-    
+
     .mechanism-steps {
         flex-direction: column;
     }
-    
+
     .mechanism-arrow {
         transform: rotate(90deg);
     }
-    
+
     .challenge-timeline {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .timeline-connector {
         width: 2px;
         height: 40px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #ffed4e 100%);
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            #ffed4e 100%
+        );
     }
-    
+
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .emphasis-box {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .pricing-features {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .line-benefits {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .floating-cta {
         bottom: 20px;
         right: 20px;
         left: 20px;
     }
-    
+
     .btn-floating {
         justify-content: center;
         width: 100%;
     }
-    
+
     .btn-floating span {
         font-size: 1rem;
     }
