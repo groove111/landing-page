@@ -15,23 +15,31 @@
     
 <body>
 <!-- ファーストビュー（ヒーローセクション） -->
+<!-- ファーストビュー（ヒーローセクション） -->
 <section class="hero">
-  <img
-    src="img/Gemini_Generated_Image_gfyasqgfyasqgfya.png"
-    alt="その靴のニオイ、5日で終わらせる。スポーツ専用消臭パウダーのイメージ"
-    class="hero-main-visual">
-</section>
+  <picture class="hero-picture">
 
+    <!-- スマホ用（縦長ヒーロー画像） -->
+    <source srcset="img/hero_sp.png" media="(max-width: 768px)">
+
+    <!-- PC用（横長ヒーロー画像） -->
+    <img
+      src="img/Gemini_Generated_Image_625y625y625y625y.png"
+      alt="その靴のニオイ、5日で終わらせる。スポーツ専用消臭パウダーのイメージ"
+      class="hero-main-visual">
+
+  </picture>
+</section>
 
 <!-- 共感・悩み訴求セクション -->
 <section class="problems">
-<div class="container">
-<h2 class="section-title">こんな<span class="highlight-text">"靴のニオイ問題"</span>に<br>心当たりはありませんか？</h2>
-<div class="problems-grid">
-<div class="problem-card">
-<div class="problem-icon">
-<i class="fas fa-futbol"></i>
-</div>
+    <div class="container">
+        <h2 class="section-title">こんな<span class="highlight-text">"靴のニオイ問題"</span>に<br>心当たりはありませんか？</h2>
+    <div class="problems-grid">
+    <div class="problem-card">
+    <div class="problem-icon">
+    <i class="fas fa-futbol"></i>
+    </div>
 <h3>子どものサッカーシューズが臭い</h3>
 <p>毎日の部活で汗だく。玄関に置くだけで家族から苦情が…</p>
 </div>
