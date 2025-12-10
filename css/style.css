@@ -480,13 +480,26 @@ a {
     background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
 }
 
-.features-image {
+.features-picture img {
     display: block;
-    max-width: 900px;   /* 画像が大きすぎると感じたら 800 くらいにしてもOK */
+    max-width: 900px;
     width: 100%;
-    margin: 40px auto 0;  /* 見出しとの余白を40px、左右中央寄せ */
-    border-radius: 20px;  /* 角丸がイヤならこの1行は消してOK */
+    margin: 40px auto 0;
 }
+
+/* スマホ用 */
+@media (max-width: 768px) {
+    .features {
+        padding: 60px 0;
+    }
+
+    .features-picture img {
+        max-width: 100%;
+        margin-top: 24px;
+        border-radius: 0;
+    }
+}
+
 
 /* ========================================
    使い方・5日間ステップセクション
