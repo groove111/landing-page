@@ -1192,7 +1192,33 @@ a {
     .hero-subtitle {
         font-size: 1.1rem;
     }
-    
+
+       /* ヒーロー画像：スマホでは画面幅いっぱいに */
+    .hero {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-main-visual {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    /* 「なぜ、ここまで消臭できるのか？」図解（features画像） */
+    .features {
+        padding: 60px 0;          /* 少し余白を詰める（お好みで調整OK） */
+    }
+
+    .features-image {
+        display: block;
+        width: 100%;              /* 画面幅いっぱいに表示 */
+        max-width: 100%;          /* PCでの900px制限を解除 */
+        margin: 24px 0 0;         /* 見出しとの距離だけ少し空ける */
+        border-radius: 0;         /* 角丸が気になるなら消す */
+    }
+
     .hero-features {
         flex-direction: column;
         gap: 15px;
