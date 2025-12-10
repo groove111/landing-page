@@ -191,9 +191,6 @@ a {
 }
 
 
-
-
-
 .hero-background {
     position: absolute;
     top: 0;
@@ -485,11 +482,11 @@ a {
 
 .features-image {
     display: block;
-    max-width: 900px;
+    max-width: 900px;   /* 画像が大きすぎると感じたら 800 くらいにしてもOK */
     width: 100%;
-    margin: 0 auto;
+    margin: 40px auto 0;  /* 見出しとの余白を40px、左右中央寄せ */
+    border-radius: 20px;  /* 角丸がイヤならこの1行は消してOK */
 }
-
 
 /* ========================================
    使い方・5日間ステップセクション
