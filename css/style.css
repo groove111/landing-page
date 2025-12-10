@@ -166,12 +166,7 @@ a {
     background-size: cover;
 }
 
-.hero-content {
-    text-align: left;
-    max-width: 650px;
-    padding-left: 5vw;
-    z-index: 3;
-}
+
 
 
 .hero-background {
