@@ -477,145 +477,19 @@ a {
 /* ========================================
    商品の特徴・成分紹介セクション
 ======================================== */
+/* 商品の特徴・成分紹介セクション（画像用） */
 .features {
     padding: 100px 0;
     background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
 }
 
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-    margin-bottom: 60px;
+.features-image {
+    display: block;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.feature-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 45px;
-    border-radius: 20px;
-    text-align: center;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(0, 255, 136, 0.5);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-}
-
-.feature-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 2.5rem;
-}
-
-.feature-icon-green {
-    background: rgba(0, 255, 136, 0.15);
-    color: #00ff88;
-}
-
-.feature-icon-blue {
-    background: rgba(0, 180, 255, 0.15);
-    color: #00b4ff;
-}
-
-.feature-icon-yellow {
-    background: rgba(255, 237, 78, 0.15);
-    color: #ffed4e;
-}
-
-.feature-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #ffffff;
-    font-weight: 700;
-}
-
-.ingredients {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-
-.ingredient-tag {
-    background: rgba(0, 180, 255, 0.2);
-    color: #00b4ff;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border: 1px solid rgba(0, 180, 255, 0.3);
-}
-
-.feature-description {
-    color: #b0b0b0;
-    line-height: 1.7;
-}
-
-.mechanism {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 50px;
-    border-radius: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-}
-
-.mechanism-title {
-    font-size: 1.5rem;
-    color: #ffed4e;
-    margin-bottom: 40px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.mechanism-title i {
-    font-size: 1.8rem;
-}
-
-.mechanism-steps {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.mechanism-step {
-    flex: 1;
-    min-width: 200px;
-    text-align: center;
-}
-
-.step-arrow {
-    background: linear-gradient(135deg, #00ff88 0%, #00b4ff 100%);
-    color: #0a0a0a;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-weight: 700;
-    display: inline-block;
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-}
-
-.mechanism-step p {
-    color: #e0e0e0;
-    line-height: 1.6;
-}
-
-.mechanism-arrow {
-    color: #00ff88;
-    font-size: 2rem;
-}
 
 /* ========================================
    使い方・5日間ステップセクション
