@@ -363,6 +363,34 @@ a {
 }
 
 /* ========================================
+   靴のニオイの原因セクション
+======================================== */
+.odor-cause {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.odor-cause-picture img {
+    display: block;
+    max-width: 900px;
+    width: 100%;
+    margin: 40px auto 0;
+}
+
+/* スマホ用 */
+@media (max-width: 768px) {
+    .odor-cause {
+        padding: 60px 0;
+    }
+
+    .odor-cause-picture img {
+        max-width: 100%;
+        margin-top: 24px;
+        border-radius: 0;
+    }
+}
+
+/* ========================================
    ベネフィット・効果紹介セクション
 ======================================== */
 .benefits {
